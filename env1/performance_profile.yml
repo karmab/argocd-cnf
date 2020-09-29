@@ -3,6 +3,15 @@ kind: PerformanceProfile
 metadata:
   name: worker-cnf
 spec:
+  additionalKernelArgs:
+    - nmi_watchdog=0
+    - audit=0
+    - mce=off
+    - processor.max_cstate=1
+    - idle=poll
+    - intel_idle.max_cstate=0
+    - nosmt
+    - tsc=reliable
   cpu:
     isolated: 0-8
     reserved: 9-15
