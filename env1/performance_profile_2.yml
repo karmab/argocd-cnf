@@ -1,7 +1,7 @@
 apiVersion: performance.openshift.io/v1alpha1
 kind: PerformanceProfile
 metadata:
-  name: worker-cnf
+  name: worker-cnf-2
 spec:
   additionalKernelArgs:
     - nmi_watchdog=0
@@ -13,7 +13,7 @@ spec:
     - nosmt
     - tsc=reliable
   cpu:
-    isolated: 2-39
+    isolated: 2-139
     reserved: 0-1
   hugepages:
     defaultHugepagesSize: "1G"
@@ -26,4 +26,4 @@ spec:
   realTimeKernel:
     enabled: true
   nodeSelector:
-    node-role.kubernetes.io/worker-cnf: ""
+    node-role.kubernetes.io/worker-cnf-2: ""
