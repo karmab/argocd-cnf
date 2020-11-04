@@ -13,8 +13,8 @@ argocd app create --project default --name cnf-config --repo https://github.com/
 ```
 
 
-And the application specific to an environment env1 with: 
+And the application specific to an environment, cnf12 for instance, with: 
 
 ```
-argocd app create --project default --name cnf-env1 --repo https://github.com/karmab/argocd-cnf.git --path env1 --directory-recurse --dest-server https://kubernetes.default.svc --sync-policy automated
+argocd app create --project default --name cnf12 --repo https://github.com/karmab/argocd-cnf.git --path cnf12 --directory-recurse --dest-server https://kubernetes.default.svc --sync-policy automated
 ```
