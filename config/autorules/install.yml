@@ -13,7 +13,7 @@ data:
     name: .*worker.*
     labels:
     - node-role.kubernetes.io/worker-cnf
-  rules1.properties: |
+  rules2.properties: |
     name: .*t5g.*
     labels:
     - node-role.kubernetes.io/worker-cnf-2
